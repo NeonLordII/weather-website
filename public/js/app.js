@@ -19,6 +19,8 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.style.color = '#FFC107';
     messageOne.textContent = 'Loading, Please wait';
     messageTwo.textContent = '';
+    messageThree.textContent = '';
+    messageFour.textContent = '';
 
     fetch('/weather?address=' + location).then(response => {
     
