@@ -8,7 +8,12 @@ const forecast = (lat, long, callback) => {
         if(!body) return callback('Weather forcast request yielded no response. Please try again later.', undefined);
         if(body.error) return callback('No such coordinates. Location doesn\'t exsist', undefined);
 
-        callback(undefined, `${body.daily.data[0].summary} It is currently ${Math.round(body.currently.temperature)} degrees with a ${Math.round(body.currently.precipProbability)}% chance of rain`);
+        callback(undefined, {
+            forecast: `${body.daily.data[0].summary}. It is currently ${Math.round(body.currently.temperature)} degrees celsius with a ${Math.round(body.currently.precipProbability)}% chance of rain`,
+            highest: `The highest today is ${Math.round(body.daily.data[0].temperatureHigh)} celsius.`,
+            lowest: `The lowest today is ${Math.round(body.daily.data[0].temperatureLow)} celsius.`
+        
+        });
     });
 }
 
