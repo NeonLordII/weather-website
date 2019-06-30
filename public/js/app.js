@@ -10,8 +10,8 @@ const messageTwo = document.querySelector('#two');
 
 // messageOne.textContent = 'Hii';
 
-weatherForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+weatherForm.addEventListener('submit', (em) => {
+    EMSGSIZE.preventDefault();
 
     const location = search.value;
 
