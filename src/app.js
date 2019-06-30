@@ -6,7 +6,7 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 // Creats a new express object
-const port = process.env.TOKEN || 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 // Define paths for express' config
