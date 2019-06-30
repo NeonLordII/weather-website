@@ -1,4 +1,5 @@
 console.log('Client side JavaScript loaded!');
+
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#one');
@@ -6,8 +7,8 @@ const messageTwo = document.querySelector('#two');
 
 // messageOne.textContent = 'Hii';
 
-weatherForm.addEventListener('submit', (em) => {
-    EMSGSIZE.preventDefault();
+weatherForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
     const location = search.value;
 
